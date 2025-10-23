@@ -1,6 +1,9 @@
 # Usa una imagen oficial de PHP como base
 FROM php:8.2-cli
 
+# Instala la extensión mysqli
+RUN docker-php-ext-install mysqli
+
 # Establece el directorio de trabajo en /app
 WORKDIR /app
 

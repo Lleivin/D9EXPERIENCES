@@ -1,0 +1,5 @@
+{
+    "name": "mi-proyecto/render",
+    "description": "Sitio PHP desplegado en Render",
+    "require": {}
+  }

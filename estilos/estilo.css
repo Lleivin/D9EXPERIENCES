@@ -1,0 +1,1886 @@
+
+/* GENERALES */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    /* font-size: 62.5%; */
+}
+.contenedor{
+  display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+/*Meqdia Query para MobyleFirst*/
+/* @media only screen and (min-width: 1080px) {
+  .contenedor{
+    display: flex;
+      width: 80%;
+      flex-direction: column;
+      margin: auto;
+  }
+} */
+
+
+:root {
+    --principal: #D13F3F;
+    --principalTransparente: #d13f3fde;
+    --blanco: #ffffff;
+    /* --blancotransparente: #ffffff7d; */
+    --blancotransparente: #ffffffb7;
+    --negro: #000000;
+    --enlace: #568ad3;
+    --correcto: rgb(173, 255, 47);
+    --titulos: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --texto: 'Abel', sans-serif;
+}
+h1,h2,h3,h4,h5 {
+    font-family: var(--titulos);
+}
+h1{
+  font-size: 2rem;
+}
+h2{
+  font-size: 1.5rem;
+}
+h3{
+  font-size: 0.8rem;
+}
+h4{
+  font-size: 0.5rem;
+}
+p{
+  font-size: 16px;
+  font-family: var(--texto);
+}
+a{
+    text-decoration: none;
+}
+
+span{
+    color: var(--principal);
+    font-weight: 600;
+}
+
+col-1 {
+    width: 8.33%
+    }
+     col-2 {
+    width: 16.66%
+    }
+    /* //para cuatro columnas// */
+     col-3 {
+    width: 25%
+    }
+    /* //para tres columnas// */
+     col-4 {
+    width: 33.33%
+    }
+     col-5 {
+    width: 41.66%
+    }
+    /* //para dos columnas// */
+     col-6 {
+    width: 50%
+    }
+     col-7 {
+    width: 58.33%
+    }
+     col-8 {
+    width: 66.66%
+    }
+     col-9 {
+    width: 75%
+    }
+     col-10 {
+    width: 83.33%
+    }
+     col-11 {
+    width: 91.66%
+    }
+    /* //para dos columnas// */
+     col-12 {
+    width: 100%
+    }
+
+    nav{
+      display: flex;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .boton{
+      background-color: var(--blanco);
+      padding: 15px;
+      border-radius: 25px;
+      border: 2px solid var(--negro);
+      width: 50%;
+      box-shadow: 7px 2px 10px -2px #dee2e6;
+    }
+     /*Meqdia Query para MobyleFirst*/
+     @media only screen and (min-width: 565px) {
+      .boton{
+        width: 35%;
+      }
+    }
+     /*Meqdia Query para MobyleFirst*/
+     @media only screen and (min-width: 768px) {
+      .boton{
+        width: 50%;
+      }
+    }
+     /*Meqdia Query para MobyleFirst*/
+     @media only screen and (min-width: 992px) {
+      .boton{
+        width: 35%;
+      }
+    }
+    
+    .boton a{
+      text-decoration: none;
+      color: var(--negro);
+      font-size: 1em;
+    }
+    .boton a:hover{
+      text-decoration: none;
+      color: var(--principal);
+      font-size: 1em;
+    }
+
+   
+
+    .enlace {
+      text-decoration: none;
+      color: var(--negro);
+    }
+    .enlace:hover {
+      color: var(--principal);
+    }
+
+
+
+    /* -----SESIONES */
+    .cajaSesion{
+      display: flex;
+      padding: 0.5rem;
+      justify-content: center;
+      background-color: var(--negro);
+      color: var(--blanco);
+      
+    }
+   
+    .cajaSesion p{
+      display: flex;
+      color: white;
+      margin: 0rem 1rem 0rem 1rem;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+    .cajaSesion a{
+      display: flex;
+    color: red;
+    margin: 0rem 1rem 0rem 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    align-items: center;
+    }
+    /*Meqdia Query para MobyleFirst*/
+    @media only screen and (min-width: 768px) {
+      .cajaSesion{
+        justify-content: right;
+      }
+      .cajaSesion a, p{
+        margin: 0rem 5rem 0rem 1rem;
+      }
+    }
+
+    /* //NEWSLEETER */
+
+
+.formSalir{
+  display: flex;
+  background-color: transparent;
+}
+
+.boton_cerrarSesion{
+  display: flex;
+  background-color: transparent;
+  border: none;
+}
+
+/* .-----------------------NAVEGADOR MOVIL */
+.navegadorOrdenador{
+    display: none;
+}
+.navegadorMovil{
+  display: flex;
+  width: 100%;
+  height: 80px;
+  margin: auto;
+  background-color: var(--principal);
+  padding: 10px;
+  align-items: center;
+   
+}
+.navegadorMovil img{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    gap: 50px;
+}
+.parteNav{
+    display: flex;
+    width: 33.3%;
+    justify-content: center;
+    margin: auto;
+    cursor: pointer;
+}
+.cajaLogosSesion{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+}
+.logoSesion{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.cajaInfoSesiones{
+  display: flex;
+  justify-content: center;
+  width: 33%;
+  padding: 20px;
+  gap: 25%;
+}
+
+
+/* Agrega estilos para el submenú */
+.submenu {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    background-color: var(--negro);
+    padding: 10px;
+    top: 80px;
+    /* z-index: 100; */
+  }
+  .submenu a {
+    display: flex;
+    width: 100%;
+    color: var(--blanco);
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 0;
+    /* font-size: 2rem; */
+    transition: color 1.5s;
+  }
+  /* Estilos adicionales para resaltar el submenú */
+  .submenu a:hover {
+    color: red;
+  }
+  /* Mostrar el submenú cuando se hace clic en el ícono del menú */
+  .submenu.show {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .parteburger{
+    display: flex;
+    width: 100%;
+  }
+  .parteburger:hover{
+    background-color: var(--blancotransparente);
+  }
+  .parteburger a{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .partesubBurger{
+    display: flex;
+    width: 100%;
+  }
+  .partesubBurger:hover{
+    transition: 1.5s;
+    background-color: var(--negro);
+  }
+  .partesubBurger a{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* Estilo para ocultar el nuevo submenú inicialmente */
+  .subsubmenu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: var(--blanco); /* Cambia el color de fondo según tus necesidades */
+    border: 1px solid --principal; /* Añade un borde para separarlo visualmente */
+    /* padding: 10px; */
+    color: var(--negro);
+    
+  }
+  .subsubmenu a{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--negro);
+  }
+  .subsubmenu a:hover{
+    color: var(--principal);
+  }
+
+  /* Estilo para mostrar el nuevo submenú al hacer hover sobre el submenú padre */
+  .submenu:hover #subsubmenu {
+    display: block;
+  }
+
+/* .-----------------------NAVEGADOR ORDENADOR */
+  @media (min-width: 768px) {
+    /* OCULTAR MOVIL */
+    .navegadorMovil{
+        display: none;
+    }
+
+    /* -----MENU ORDENADOR------ */
+    .navegadorOrdenador{
+        display: flex;
+    width: 100%;
+    height: 80px;
+    margin: auto;
+    background-color: var(--principal);
+    padding: 10px;
+    align-items: center;
+    }
+.parteNavOrdena{
+        display: flex;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+    }
+.parteNavOrdena a{
+        text-align: center;
+    }
+    
+.cajaEnlacesOrdena{
+  display: flex;
+  justify-content: flex-end;
+  margin: auto;
+  max-width: 100%;
+  flex-wrap: wrap;
+        
+    }
+
+    .enlacesMenuOrde{
+      display: flex;
+      justify-content: center;
+      padding-right: 50px;
+  }
+
+  .enlacesMenuOrde a{
+  width: 100%;
+  color: var(--blanco);
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 0;
+  /* font-size: 2rem; */
+  transition: color 1.5s;
+  align-items: center;
+  }
+  .enlacesMenuOrde a:hover{
+  color: var(--negro);
+  }
+
+
+    .navegadorOrdenador img{
+        display: flex;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .parteNavOrdena a{
+        display: flex;
+        align-items: center;
+    }
+    
+    .cajaEnlacesOrdena a{
+        display: flex;
+        justify-content: space-between;
+
+        justify-content: center;
+    }
+   
+    .cajaLogoSesionOrdena{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      max-width: 100%;
+    }
+    .logoSesionOrdena{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .submenuDesplegable {
+      display: none;
+      position: absolute;
+      width: 100%;
+      top: 80px;
+      left: 0;
+      background-color: var(--negro); /* Color de fondo del submenú */   
+  }
+    .submenuDesplegable a{
+      width: 100%;
+      height: 100%;
+      /* font-size: 2rem; */
+      padding: 1rem;
+      color: var(--blanco);
+      text-decoration: none;
+  }
+    .submenuDesplegable a:hover{
+      color: var(--negro);
+      text-decoration: none;
+  }
+
+  /* Estilo para mostrar el submenú desplegable al hacer clic en el enlace "D9Experiences" */
+#cajaDesplegableOrdenador:hover #submenuDesplegable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+}
+
+/* .enlacesSubMenuOrde:hover{
+  background-color: var(--principal);
+} */
+.enlacesSubMenuOrde a{
+  background-color: var(--negro);
+}
+.enlacesSubMenuOrde a:hover{
+  background-color: var(--blanco);
+  transition: 1.5s;
+  color: var(--principal);
+}
+
+  }
+
+
+
+  /* <!-- --------------------------FOOTER MOVIL--> */
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--negro);
+    color: var(--blanco);
+    
+  }
+  
+  .enlacesFooter {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    background-color: var(--negro);
+  }
+
+  .enlacesFooter a{
+    text-align: center;
+    text-decoration: none;
+    color: var(--blanco);
+    transition: color 1.5s;
+    margin-top: 30px;
+  }
+  .enlacesFooter a:hover{
+    color: var(--principal);
+  }
+
+  .redesSociales{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    margin: auto;
+    gap: 50px;
+    padding: 20px; 
+    max-width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .redesSociales img{
+    display: flex;
+    width: 50px;
+    height: 50px;
+  }
+
+  .partner{
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+  }
+  .partner img{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin: auto;
+  }
+  .partner p{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    /* font-size: 2em; */
+    align-items: center;
+    justify-content: center;
+    padding: 0 20% 10% 20%;
+  }
+
+
+/* //NEWSLEETEER */
+
+.cajanewsLetter{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blanco);
+  padding: 20px;
+}
+
+.mensajeNewsletter {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 80%;
+}
+.mensajeNewsletter p {
+  text-align: justify;
+    /* font-size: 1em !important; */
+    color: var(--negro);
+    /* width: 90%; */
+    margin: auto;
+}
+.mensajeNewsletter h3 {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 1rem;
+  color: var(--principal);
+}
+.terminosCondiciones{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  margin: 0.5rem;
+  margin-bottom: 2rem;
+}
+.terminosCondiciones a{
+  text-decoration: none;
+  color: var(--negro);
+}
+.terminosCondiciones a:hover{
+  color: var(--enlace);
+}
+
+.formularioNewsletter{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+}
+.cajaDatosNewsletter{
+  display: flex;
+  margin: auto;
+  align-items: center;
+  flex-direction: row;
+  width: 80%;
+}
+.datosNewsletter{
+  display: flex;
+  flex: 0 0 auto;
+  padding: 8px;
+  justify-content: center;
+}
+.correoNews{
+  display: flex;
+  border-top-left-radius: 150px;
+  border-bottom-left-radius: 150px;
+}
+.enviarNewsletter{
+  display: flex;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  background-color: var(--principal);
+}
+/* darse de baja */
+.darseBajaNewsletter{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 1rem;
+  color: var(--negro);
+  justify-content: center;
+  font-size: 16px;
+}
+.darseBajaNewsletter a{
+  text-decoration: none;
+  color: var(--enlace);
+  /* font-size: 16px; */
+}
+
+/* Validaciones */
+.correcto {
+  background-color: var(--correcto);
+  color: var(--blanco);
+  /* font-size: 1.5rem; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 2rem;
+  border-top-left-radius: 150px;
+  border-bottom-left-radius: 150px;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.incorrecto {
+  background-color: var(--principal);
+  color: var(--blanco);
+  /* font-size: 1.5rem; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-top-left-radius: 150px;
+  border-bottom-left-radius: 150px;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+        /* //MOVIL FIRST 600 - 768 - 992 - 1024 -2024// */
+@media (min-width: 768px) {
+  .cajaDatosNewsletter{
+   
+    width: 80%;
+  }
+}
+@media (min-width: 992px) {
+  .cajaDatosNewsletter{
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .cajaDatosNewsletter{
+    width: 40%;
+  }
+}
+
+  /* <!-- --------------------------FOOTER ORDENADOR--> */
+  /* Media query para cambiar a 4 columnas en dispositivos de escritorio */
+  @media screen and (min-width: 768px) {
+    .enlacesFooter {
+        display: grid;
+        width: 100%;
+        margin: auto;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 20px;
+        background-color: var(--negro);
+      }
+      .redesSociales{
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .partner{
+        display: flex;
+        max-width: 100%;
+        flex-direction: column;
+        margin: auto;
+        text-align: center;
+      }
+      .partner img{
+        display: flex;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        margin: auto;
+      }
+
+      .partner{
+        flex-direction: row;
+      }
+      
+      .partner img{
+        display: flex;
+        width: 300px;
+        height: 300px;
+      }
+      .partner p{
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        /* font-size: 2em; */
+        align-items: center;
+        justify-content: center;
+        padding: 0 10% 0 10%;
+      }
+
+      .cajanewsLetter {
+        padding: 50px;
+    }
+      .mensajeNewsletter {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 50%;
+        align-items: center;
+    }
+    .mensajeNewsletter h3{
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .formularioNewsletter {
+      display: flex;
+      width: 61%;
+  }
+  .mensajeNewsletter p {
+    font-size: 1rem;
+}
+    }
+
+
+    /* -----------------  -----PAGINA INDEX ------------- */
+
+/* <!-- --------------------------CUERPO MOVIL--> */
+
+.sectionVideoIndex{
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+}
+
+/* CAMBIOS DE VIDEO (PRUEBA) */
+.videoIndex{
+  position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    /* width: 100%; */
+    height: 100%;
+    object-fit: cover;
+    z-index: -100;
+}
+
+.cajaCamposIndex {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+
+
+
+.textoIndex{
+display: flex;
+flex-direction: column;
+margin: auto;
+width: 100%;
+height: 100%;
+justify-content: center;
+padding: 20px;
+text-align: center;
+align-items: center;
+}
+.textoIndex h3{
+  margin: 2rem;
+  color: var(--blanco);
+}
+.textoIndex:hover{
+background-color: var(--blancotransparente);
+}
+
+/* <!-- --------------------------CUERPO  ORDENADOR--> *
+        /* //MOVIL FIRST 600 - 768 - 992 - 1024 -2024// */
+@media (min-width: 768px) {
+  
+  .cajaCamposIndex {
+    flex-direction: row;
+    height: 450px;
+  }
+  .textoIndex{
+    height: 100%;
+    }
+
+}
+
+    /* ----------------------------------------- */
+        /* -----------------PAGINA BAJA NEWSLETTER ------------- */
+    /* ----------------------------------------- */
+
+    .sectionBajaNewsletter{
+      background-image: url(../img/baja_newsletter.jpg);
+      background-position: center, center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-color: rebeccapurple;
+    }
+
+    .margenBajaNewsletter{
+      display: flex;
+      margin-top: 8rem;
+      margin-bottom: 8rem;
+    }
+            /* //MOVIL FIRST 600 - 768 - 992 - 1024 -2024// */
+    @media (min-width: 768px) {
+      .margenBajaNewsletter{
+        display: flex;
+        margin-top: 12rem;
+        margin-bottom: 12rem;
+      }
+    }
+
+        /* ----------------------------------------- */
+        /* -----------------LOGIN ------------- */
+    /* ----------------------------------------- */
+
+    .sectionLogin{
+      display: flex;
+      max-width: 100%;
+      background-image: url(../img/fondo_Login.png);
+      background-position: center, center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* background-attachment: fixed; */
+    }
+    
+    .sectionLoginAdmin{
+      display: flex;
+      max-width: 100%;
+      background-image: url(../img/Login_admin.jpg);
+      background-position: center, center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* background-attachment: fixed; */
+    }
+
+    .cajaLogin{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin: 2rem auto;
+      /* background-color: gray; */
+    }
+   
+    .cajaLogin h4{
+      color: rgb(160, 61, 61);
+      text-transform: uppercase;
+      font-weight: 300;
+      justify-content: center;
+      
+    }
+    .cajaLoginAdmin{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin: 10rem auto;
+      text-align: center;
+      /* background-color: gray; */
+    }
+    .cajaLoginAdmin h4{
+      color: rgb(160, 61, 61);
+      text-transform: uppercase;
+      font-weight: 300;
+      justify-content: center;
+    }
+    .cajaLoginAdmin p{
+      color: rgb(255, 255, 255);
+      font-weight: 300;
+      justify-content: center;
+      
+    }
+    .formLogin{
+      display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: left;
+    padding: 1rem;
+    border-radius: 50px;
+    background-color: var(--blancotransparente);
+    backdrop-filter: blur(3px);
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+    .cajaformulario{
+      display: flex;
+      width: 90%;
+      flex-direction: column;
+      /* background-color: #568ad3; */
+      margin: 1rem 0 1rem 0;
+      justify-content: center;
+      text-align: center;
+      border-radius: 25px;
+    }
+    .cajaformulario label{
+      border: none;
+    padding: 0.1rem;
+    color: var(--negro);
+    font-style: oblique;
+    font-weight: 500;
+    font-size: 1.2em;
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    }
+    .cajaformulario input{
+      /* background-color: green; */
+      margin: 0.5rem;
+      border-radius: 25px;
+      border: none;
+      padding: 0.1rem;
+    }
+    .usuario{
+      height: 45px;
+    padding: 1rem !important;
+    }
+    .usuario::placeholder {
+      /* Agrega el padding que desees */
+      padding: 10px;
+  }
+    .passwordProfe::placeholder {
+      /* Agrega el padding que desees */
+      padding: 10px;
+  }
+  input[type="text"] {
+    /* Agrega el padding que desees */
+    padding: 10px;
+}
+input[type="password"] {
+  /* Agrega el padding que desees */
+  padding: 10px;
+}
+/* Ocultar el tooltip inicialmente */
+#nombreTooltip {
+  display: none;
+}
+
+/* Mostrar el tooltip cuando se pasa el ratón sobre el botón de información */
+#nombreTooltipButton:hover + #nombreTooltip {
+  display: block;
+}
+
+
+    .cajaBotonForm{
+      display: flex;
+      width: 100%;
+      margin: auto;
+      /* background-color: #D13F3F; */
+      justify-content: center;
+    }
+
+
+    .cambiarLogin{
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Alinea verticalmente */
+      align-items: center;     /* Alinea horizontalmente */
+      text-align: center;      /* Centra el texto si hay varias líneas */
+      margin: auto;
+      margin-top: 1.5rem;
+    }
+    .cajaLogin p {
+      display: flex;
+          flex-direction: column;
+          text-align: center;
+          margin: auto;
+          justify-content: center;
+          padding: 5px;
+    }
+  
+    .cambiarLogin span:hover{
+      color: var(--blanco);
+      cursor: pointer;
+    }
+
+    
+
+            /* //MOVIL FIRST 600 - 768 - 992 - 1024 -2024// */
+    @media (min-width: 768px) {
+     .formLogin{
+      width: 60%;
+      margin: 5rem;
+     }
+     
+     .cajaformulario{
+      width: 50%;
+    }
+     
+    .formLogin{
+      justify-content: center;
+      margin: auto;
+      align-items: center;
+    }
+    }
+
+
+    /* //PERFIL */
+
+    .seccionPerfil{
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      background-image: url(../img/perfil_soldado.jpg);
+      background-position: center,center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .cajaPerfil{
+      display: flex;
+      flex-direction: column;
+      width:  70%;
+      background-color: var(--blancotransparente);
+      border-radius: 25px;
+      margin: 3rem auto;
+      padding: 1rem;
+    }
+    .cajaPerfil h3{
+      text-align: center;
+      margin: 1rem;
+      justify-items: center;
+
+    }
+    .botoneraEdit{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      
+    }
+
+/* Estilo para el overlay de Jugador */
+#adminoverlay {
+  position: fixed; /* Asegura que cubra toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+  z-index: 999; /* Asegura que esté por encima del contenido */
+}
+
+/* Estilo para el overlay de Partida */
+#adminoverlayPartida {
+  position: fixed; /* Asegura que cubra toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+  z-index: 999; /* Asegura que esté por encima del contenido */
+}
+#adminoverlayCancelarPartida {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  z-index: 999; /* Asegura que esté encima del resto */
+}
+#adminoverlaydesCancelarPartida {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  z-index: 1000; /* Asegura que el overlay esté sobre el resto del contenido */
+  display: block;
+}
+
+
+/* Clase para ocultar elementos */
+.d-none {
+  display: none;
+}
+
+    
+    .datosJugador{
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 0 2rem;
+    }
+    .tituloPerfil{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .tituloPerfil button{
+      display: flex;
+      text-align: right;
+      margin-right: 2rem;
+      background-color: transparent;
+      border: none;
+      font-size: 1.5rem;
+    }
+    .tituloPerfil button:hover{
+      color: var(--principal);
+    }
+    .cajaperfilActualiza{
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      align-items: center;
+      flex-wrap: wrap;
+      
+    }
+
+    
+    
+    /*Meqdia Query para MobyleFirst*/
+    @media only screen and (min-width: 768px) {
+      
+  
+      .cajaPerfil{
+        display: flex;
+        flex-direction: column;
+        width:  50%;
+        background-color: var(--blancotransparente);
+        border-radius: 25px;
+        margin: 3rem auto;
+        padding: 1rem;
+      }
+      .cajaPerfil h3{
+        text-align: center;
+        margin: 1rem;
+        justify-items: center;
+  
+      }
+      .datosJugador{
+        margin: 0 0 0 3rem;
+      }
+      .tituloPerfil{
+        justify-content: space-around;
+      }
+      .tituloPerfil button{
+        display: flex;
+        justify-content: left;
+        font-size: 2rem;
+      }
+  
+    }
+
+
+ 
+.cajaEliminarPerfil {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--principalTransparente);
+  max-width: 40%;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+  border-radius: 25px;
+  position: fixed; /* Fija la posición relativa a la ventana del navegador */
+  top: 50%; /* Posiciona el centro del contenedor al 50% de la altura de la ventana */
+  left: 50%; /* Posiciona el centro del contenedor al 50% del ancho de la ventana */
+  transform: translate(-50%, -50%); /* Mueve el contenedor hacia arriba y a la izquierda por la mitad de su propio ancho y altura */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+.cajaEliminarPartida {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--principalTransparente);
+  max-width: 40%;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+  border-radius: 25px;
+  position: fixed; /* Fija la posición relativa a la ventana del navegador */
+  top: 50%; /* Posiciona el centro del contenedor al 50% de la altura de la ventana */
+  left: 50%; /* Posiciona el centro del contenedor al 50% del ancho de la ventana */
+  transform: translate(-50%, -50%); /* Mueve el contenedor hacia arriba y a la izquierda por la mitad de su propio ancho y altura */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+    .seleccionOpciones{
+      display: flex;
+      justify-content: space-around;
+    }
+    .seleccionOpciones button{
+      width: 25%
+    }
+
+
+    /* //ADMINISTRACION */
+
+    .seccionlistaJugadores {
+      background-image: url(../img/perfil_soldado.jpg);
+      background-position: center, center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column; /* Ajustado para que el contenido se apile verticalmente */
+      max-width: 100%;
+      overflow-x: auto; /* Permite el desplazamiento horizontal */
+      padding: 2rem 0 2rem 0;
+  }
+  
+  .tituloListaJugadores {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    flex-direction: row-reverse;
+}
+
+.tituloListaJugadores h3 {
+    flex-grow: 1;
+    text-align: left;
+    margin: 0;
+}
+
+  .table-responsive {
+      width: 90%;
+      margin: auto;
+      overflow-x: auto; /* Permite el desplazamiento horizontal */
+  }
+  
+  .table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+  
+  .table tr {
+      background-color: var(--blancotransparente);
+  }
+  .cabeceraTable{
+    text-transform: uppercase;
+  }
+  
+  .table th, .table td {
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #ddd;
+      text-align: center;
+  }
+  
+  .linea {
+      white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+  }
+
+  /* //DESPLEGABLES DE ACCIONES */
+  .toggle-btn {
+    background-color: var(--enlace);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+}
+
+.toggle-btn.active {
+    background-color:var(--enlace);
+}
+
+.contenido {
+    display: none;
+    overflow: hidden;
+}
+
+.contenedorDesplegable {
+    background-color: var(--blancotransparente);
+    padding: 2rem;
+}
+/*Meqdia Query para MobyleFirst*/
+@media only screen and (min-width: 992px) {
+  .contenedorDesplegable {
+    margin: auto;
+    width: 90%;
+}
+}
+/*Meqdia Query para MobyleFirst*/
+@media only screen and (min-width: 1024) {
+  .contenedorDesplegable {
+    margin: auto;
+    width: 80%;
+}
+}
+
+.btnNuevaPartida{
+  display: flex;
+  max-width: 93%;
+  margin: 1rem;
+  justify-content: right;
+}
+
+
+
+/* NUEVA PARTIDA */
+
+.selecciones{
+  display: flex;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+
+
+
+/* //PAGINACION DE PARTIDAS */
+.paginacion{
+  display: flex;
+  max-width: 90%;
+  padding: 1rem;
+  text-decoration: none;
+  background-color: var(--blancotransparente);
+  color: var(--principal);
+  justify-content: space-around;
+  margin: auto;
+  align-items: center;
+}
+.paginacion a{
+  text-decoration: none;
+  color: var(--negro);
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+
+/* //BUSCADOR */
+.buscador{
+  display: flex;
+    /* max-width: 90%; */
+    flex-wrap: wrap;
+    margin: auto;
+    border:none;
+}
+
+.formBuscarPartida{
+  display: flex;
+    width: 100%;
+    border:none;
+}
+
+.cajaBuscador{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  padding: 1rem;
+  align-items: center;
+  /* gap: 1rem; */
+  row-gap: 1rem;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+  border:none;
+}
+.cajaBusqueda {
+  display: flex;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  outline: none; /* Elimina el borde negro al hacer clic */
+}
+
+.cajaBusqueda:focus {
+  outline: none; /* Asegura que no haya un borde cuando el input está enfocado */
+}
+
+/* //BUSCADOR PRUEBA */
+.results-container{
+  display: flex;
+  max-width: 100%;
+}
+
+
+
+/* *********                   SECTION PARTIDAS */
+
+.sectionPartidasDistrito9{
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  /* padding: 3rem; */
+  background-image: url(../img/partidas_distrito9.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.sectionPartidasEnclave{
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  /* padding: 3rem; */
+  background-image: url(../img/partidas_Enclave.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.tituloPartidas{
+  display: flex;
+    padding: 0.5rem;
+    text-align: center;
+    max-width: 90%;
+    margin-left: 2rem;
+    margin: left 2rem;
+    color: var(--blanco);
+}
+
+.partidasTipo{
+  display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    padding: 2rem;
+    /* align-items: center; */
+    justify-content: center;
+    align-content: center;
+}
+
+/* Tarjetas de partidas */
+.cardPartida{
+  display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    border: solid 15px var(--blancotransparente);
+    /* padding: 1rem; */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 1rem; /* Separación entre las cards en pantallas pequeñas */
+  width: 100%; /* En pantallas pequeñas que ocupe todo el ancho */
+}
+
+.infoPartida{
+  display: flex !important;
+  margin: auto;
+  max-width: 90%;
+  align-content: center;
+  font-size: 1.2em;
+  justify-self: center;
+  text-align: justify;
+}
+
+.card-content p{
+  font-size: 1.5em;
+}
+
+
+/* Media query para pantallas pequeñas (>=576px) */
+@media (min-width: 576px) {
+  .cardPartida {
+    /* width: calc(50% - 1rem); Dos tarjetas por fila con separación */
+    width: 40% !important;
+    /* gap: 1rem; */
+    margin-bottom: 1.5rem !important;
+  }
+  .card-content p{
+    font-size: 1.2em;
+  }
+  .infoPartida{
+    font-size: 1.2em;
+  }
+  .partidasTipo {
+    gap: 1rem;
+    justify-content: space-evenly; /* Espaciar las tarjetas de manera equilibrada */
+  }
+}
+
+/*Meqdia Query para MobyleFirst*/
+@media only screen and (min-width: 768px) {
+  .cardPartida {
+    width: 30% !important; /* Ocupará el 30% del ancho para que quepan varias tarjetas por fila */
+    margin-bottom: 1.5rem; /* Mayor separación entre las filas */
+    margin-right: 1rem; /* Separación entre tarjetas a la derecha */
+  }
+  .card-content p{
+    font-size: 1em !important;
+  }
+  .infoPartida{
+    font-size: 1em !important;
+  }
+
+  .partidasTipo {
+    justify-content: space-evenly !important; /* Espaciar las tarjetas de manera equilibrada */
+  }
+}
+
+/* Media query para pantallas grandes (>=992px) */
+@media (min-width: 992px) {
+  .cardPartida {
+    width: calc(20% - 1rem) !important; /* Cinco tarjetas por fila */
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+.btninforPartida{
+  display: flex;
+  max-width: 55%;
+  margin: auto;
+  font-size: 12px;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  background-color: transparent !important;
+  color: var(--enlace) !important;
+  
+}
+
+.btnformApuntarsePartida{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  text-decoration: none;
+}
+
+.extra-info{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0rem;
+  /* background-color: yellow; */
+}
+
+
+.cardPartida h4 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.cardPartida p {
+  margin: 0.3rem 0;
+  /* color: #666; */
+  color: var(--negro)
+}
+
+.cardPartida button {
+  /* margin-top: 1rem; */
+  padding: 0.5rem 1rem;
+  background-color: #568ad3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cardPartida button:hover {
+  background-color: #4567a5;
+}
+
+
+.message {
+  background-color: var(--blanco);
+  color: var(--negro);
+  padding: 20px;
+  text-align: center;
+  border: 2px solid var(--negro);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+}
+
+.message span {
+  font-weight: bold;
+}
+
+.cajaMensajeSinPartidas{
+  display: flex;
+  justify-content: center !important;
+  width: 50%;
+
+}
+.cajaMensajeSinPartidas p{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+
+
+
+
+
+/* Estilos para la tarjeta si está cancelada */
+.cardPartida.cancelada {
+  opacity: 0.9;
+  filter: blur(1px);
+  pointer-events: none; /* Desactiva cualquier interacción */
+}
+
+.cardPartida.cancelada button {
+  background-color: rgb(248, 0, 0);
+  cursor: not-allowed; /* Muestra que no se puede interactuar */
+}
+
+.cardPartida.cancelada button:hover {
+  background-color: #999;
+}
+
+
+
+
+/* APUNTARSE PARTIDA */
+
+
+.containerInformacionPartida {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 800px; /* Ajusta el ancho máximo según tu preferencia */
+}
+
+
+
+.infoLabel {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.infoValue {
+  color: #555;
+  font-size: 1em;
+}
+
+@media (min-width: 768px) {
+  .infoPartida {
+      flex: 1 0 48%; /* Dos columnas en pantallas medianas y grandes */
+  }
+}
+
+
+
+
+
+
+.cajaApuntarsePartida h4{
+  color: rgb(160, 61, 61);
+  text-transform: uppercase;
+  font-weight: 300;
+  justify-content: center;
+  
+}
+
+.cajaformularioApuntarsePartida{
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  /* background-color: #568ad3; */
+  margin: 1rem 0 1rem 0;
+  justify-content: center;
+  text-align: center;
+  border-radius: 25px;
+  margin: auto;
+}
+.cajaformularioApuntarsePartida label{
+  border: none;
+  padding: 0.1rem;
+  color: var(--negro);
+  font-style: oblique;
+  font-weight: 500;
+  font-size: 1.2em;
+  text-align: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin: 1rem auto;
+}
+.cajaformularioApuntarsePartida input{
+  margin: 0.5rem;
+  border-radius: 25px;
+  border: none;
+  padding: 0.1rem;
+}
+
+.cajaBotonFormPartida{
+  display: flex;
+  width: 100%;
+  margin: 1rem auto;
+  justify-content: center;
+}
+
+
+/* ------- */
+
+
+
+.sectionApuntarsePartida{
+  display: flex;
+  max-width: 100%;
+  background-image: url(../img/apuntarse_partida.jpg);
+  background-position: center, center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+}
+
+.cajaApuntarsePartida{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+
+.infoApuntarsePartidas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 50px;
+    background-color: var(--blancotransparente);
+    backdrop-filter: blur(3px);
+    margin: auto;
+}
+
+.infoLabel, .infoValue   {
+  display: flex;
+    font-size: 1.5rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.formApuntarsePartidas{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 50px;
+  /* backdrop-filter: blur(px); */
+  margin: auto;
+}
+
+.linea-separadora {
+  width: 80%; /* Un poco más corto para dar espacio a los lados */
+  height: 8px; /* Grosor reducido para un look más minimalista */
+  border-radius: 100px; /* Bordes más redondeados */
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, var(--principalTransparente) 50%, rgba(255,255,255,0) 100%);
+  margin: 2rem auto; /* Centrando y espaciando arriba y abajo */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para efecto flotante */
+  opacity: 0.6; /* Transparencia para suavizar el color */
+}
+
+
+.pieFormApuntarse{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.cambiarInscripcion{
+  display: flex;
+  margin: 2rem auto;
+}
+.enviarLogin p{
+  text-align: center !important;
+  margin: auto;
+}
+
+.enviarLogin a{
+  text-decoration: none;
+  color: var(--principal);
+}
+
+
+
+.enlaceRojo{
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--principal);
+}
+
+/* Estilo inicial para el botón Eliminar en pantallas pequeñas */
+.btnAñadirJugador {
+  display: flex;
+  margin: auto;
+  width: 200px;
+}
+.btnEliminarJugador{
+  display: flex;
+  margin: auto;
+  width: 200px;
+}
+
+/* Media Query para pantallas de al menos 768px de ancho */
+@media only screen and (min-width: 768px) {
+  .btnAñadirJugador {
+    display: flex;
+    margin-left: 75%;
+  }
+  .btnEliminarJugador{
+    display: flex;
+    top: 0;
+    width: 200px;
+  }
+}
+
+
+
+
+.completada {
+  background-color: red;
+  color: rgb(204, 24, 24);
+  cursor: not-allowed; /* Opcional: cambia el cursor para indicar que no se puede hacer clic */
+  opacity: 0.7; /* Opcional: añade un poco de transparencia para indicar estado deshabilitado */
+}
+
+
+
+
